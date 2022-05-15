@@ -19,8 +19,6 @@ class Cart extends Model
 
     protected $hidden = ['session_id'];
 
-    private const COOKIE_CACHE_EXPIRES = 3600 * 24 * 31;
-
     public function items(): HasMany
     {
         return $this->hasMany(CartItem::class);
